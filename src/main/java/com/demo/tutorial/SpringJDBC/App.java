@@ -27,11 +27,12 @@ public class App
     	try{
         	Account account = accountDao.find(100);  
         	
-            // System.out.println(account.getId());
-             System.out.println("This is owner name " + account);
-//             System.out.println(account.getBalance());
-               System.out.println(account.getAccessTime());
-//             System.out.println(account.isLocked());    		
+             System.out.println("Account Id: " + account.getId());
+             System.out.println("Owner Name: "+ account.getOwnerName());
+             System.out.println("Balance: " + account.getBalance());
+             System.out.println("Access Time: " + account.getAccessTime());
+             System.out.println("Is Account Locked: "+ account.isLocked());    		
+ 
     	}catch(NullPointerException e){
     		System.out.println("NullPointer");
     	}
